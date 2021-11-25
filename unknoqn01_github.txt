@@ -1,0 +1,54 @@
+
+https://velog.io/@drv98/series
+
+https://blog.naver.com/drv98
+
+https://git-scm.com/ 다운
+use visual studio code as 선택
+git bash 실행 위쪽 화살표 복사 에러 없음 표시x
+$git config --global gui.encoding utf-8
+
+$ git --version
+$ git config --global user.name [name] 변경 식별주소지정
+$ git config --global user.email [asd@google.com]변경
+$ git config --list 목록
+폴더(git_test) 우클릭 git bash here
+$ git init 저장소 만들기 init>add .>commit -m ["설명"]
+$ clear 리셋
+$ git help 도움말
+$ git status 작업 상태
+ git_test/파일 만들기
+$ git add *.*
+$ git status 상황 보기
+$ git commit -m *
+$ git checkout --*
+$ git checkout -- . 롤백 복구
+$ git add . 모두 추가
+$ git log 처리된 기록
+$ git remote add origin https://github.com/unknoqn01/test.git
+$ git remote 저장소
+$ git push -u origin master 최초만
+$ git push git서버에 옮기기commit -m
+$ git pull  git서버 받기
+$ git remote remove origin 깃서버 저장소 삭제
+$ rm -rf .git 로컬(내컴퓨터) 깃 저장소 삭제
+github.com에서 . 누르면 온라인 vsCode이동
+되돌아가기 go to back
+바탕화면에 
+$ git clone git 주소 사용할 폴더명 복사
+
+https://technote.kr/353 vsCode로 깃허브 업로드
+
+
+
+
+
+
+
+
+
+
+
+
+
+

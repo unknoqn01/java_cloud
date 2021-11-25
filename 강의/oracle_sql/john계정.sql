@@ -1,0 +1,4 @@
+-- 존계정에서 테이블 만들기
+CREATE TABLE t1(id NUMBER PRIMARY kEY);
+
+DROP TABLE t1;
