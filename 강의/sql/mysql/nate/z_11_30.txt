@@ -1,0 +1,20 @@
+11/30
+1.classpath 세팅 
+ - path VS classpath 구분
+2.ChatClientAWT3 수정사항
+ - ChatClientAWT2를 복사한다.
+ - main 메소드 삭제
+ - 생성자 수정
+ - String title, id 추가
+ - ip, port, connect(버튼) 모두 삭제
+ - run에서 Server 연결 부분 삭제
+ - connect 메소드 삭제
+ - 생성자 밑에 쓰레드 시작 코드 추가
+   (new Thread(this).start();)
+ - actionPerformed에서 connect 버튼 이벤트 삭제
+ - actionPerformed에서 아이디 입력 부분 삭제
+ - LoginAWT3.java에서 로그인 성공후에 코드 추가
+(new ChatClientAWT3(in, out, id);) 
+3.이중 접속 제한 기능
+ - 
+
