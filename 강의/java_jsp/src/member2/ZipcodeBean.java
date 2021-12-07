@@ -1,12 +1,13 @@
 package member2;
 
-public class ZipcodeBean {
+public class ZipcodeBean/*테이블명+Bean*/ {
 
 	private String zipcode;
 	private String area1;
 	private String area2;
 	private String area3;
-
+	private String area4;
+	
 	//getter
 	public String getZipcode()/*getXxx*/{
 		return zipcode;
@@ -32,5 +33,11 @@ public class ZipcodeBean {
 	}
 	public void setArea3(String area3) {
 		this.area3 = area3;
+	}
+	public String getArea4() {
+		return area4;
+	}
+	public void setArea4(String area4) {
+		this.area4 = area4;
 	}
 }

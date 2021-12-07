@@ -24,18 +24,19 @@ public class ZipcodeFrame extends Frame implements ActionListener{
 	TextField tf;
 	JPanel p1,p2;
 	ZipcodeMgr mgr;
-	DialogBox err1, err2;
-
+	DialogBox err;
+	MemberAWT awt;
 	
-	public ZipcodeFrame() {
+	public ZipcodeFrame(MemberAWT awt) {
+		this.awt = awt;
 		setTitle("ZipcodeFrame");
-		setBounds(500,500,300,500);
+		setBounds(awt.getX()+awt.getWidth(), awt.getY(),300,500);
 		mgr = new ZipcodeMgr();
 		p1=new JPanel();
 		p1.setBackground(Color.LIGHT_GRAY);
-		p1.add(label = new JLabel ("동이름:",label.CENTER));
-		p1.add(tf = new TextField("강남대로",15));
-		p1.add(searchBtn = new JButton("검색"));
+		p1.add(label = new JLabel ("���̸�:",label.CENTER));
+		p1.add(tf = new TextField("������",15));
+		p1.add(searchBtn = new JButton("�˻�"));
 		tf.addActionListener(this);
 		searchBtn.addActionListener(this); 
 		//////////////////////////////////////
@@ -43,7 +44,7 @@ public class ZipcodeFrame extends Frame implements ActionListener{
 		list.addActionListener(this);
 		//////////////////////////////////////
 		p2=new JPanel();
-		p2.add(selectBtn = new JButton("선택"));
+		p2.add(selectBtn = new JButton("����"));
 		selectBtn.addActionListener(this);
 		p2.setBackground(Color.LIGHT_GRAY);
 		///////////////////////////////////////
@@ -62,54 +63,31 @@ public class ZipcodeFrame extends Frame implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		//모든 클래스 객체를 Object가 레퍼런스 할 수 있다.
-		//Object obj1 =  new String();//객체불변의 법치
 		Object obj = e.getSource();
-		if(obj==searchBtn||obj==tf) {
-			if(tf.getText().trim().length()==0) {
-				if(err1==null) {
-					err1 = new DialogBox(this, "알림","검색어를 입력하세요.");
-				}else {
-					err1.setLocation(this.getX()+this.getWidth()/2-(err1.getWidth()/2),
-							this.getY()+this.getHeight()/2-(err1.getHeight()/2));
-					err1.setVisible(true);
-				}
-			} else {//검색 결과를 list 추가
-				list.removeAll();//기존 검색결과를 제거
-				Vector<ZipcodeBean> vlist = 
-						mgr.zipcodeRead(tf.getText()/*강남대로*/);
-				if(vlist.isEmpty()) {//결과값이 없을때
-					if(err2==null) {
-						err2 = new DialogBox(this, "알림","검색 결과가 없습니다.");
-					}else {
-						err2.setLocation(this.getX()+this.getWidth()/2-(err2.getWidth()/2),
-								this.getY()+this.getHeight()/2-(err2.getHeight()/2));
-						err2.setVisible(true);
-					}
-					tf.setText("");
-				}else {
-					for (int i = 0; i < vlist.size(); i++) {
-						ZipcodeBean bean = vlist.get(i);
-						String str = bean.getZipcode()+" ";
-						str+= bean.getArea1() +" ";
-						str+= bean.getArea2() +" ";
-						str+= bean.getArea3() +" ";
-						list.add(str);
-					}
-				}
-			}
-		}else if(obj==list||obj==selectBtn) {
-			
+		if(obj==searchBtn||obj==tf){
+			list.removeAll();
+			Vector<ZipcodeBean> vlist = mgr.zipcodeRead(tf.getText()/*������*/);
+			if(vlist.isEmpty()){
+				if(err==null) 
+					err = new DialogBox(this,"���� �ּ��Դϴ�.", "Error");
+				else 
+					err.setVisible(true);
+			}else{
+				for (int i = 0; i < vlist.size(); i++) {
+					ZipcodeBean bean = vlist.get(i);
+					String str = bean.getZipcode()+"  ";
+					           str+=bean.getArea1()+"  ";
+					           str+=bean.getArea2()+"  ";
+					           str+=bean.getArea3()+"  ";
+					           str+=bean.getArea4()+"  ";
+					           list.add(str);
+				}//for
+			}//if2
+		}else if(obj==list||obj==selectBtn){
+			String add = list.getSelectedItem();
+			awt.tf4.setText(add);
+			list.removeAll();
+			dispose();
 		}
 	}
-	
-	
-	public static void main(String[] args) {
-		new ZipcodeFrame();
-	}
 }
-
-
-
-
-

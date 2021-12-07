@@ -7,43 +7,38 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-//ê²€ìƒ‰ì´ ì—†ëŠ” ì£¼ì†Œ ì…ë ¥ì‹œ ì•Œë¦¼ì°½
-public class DialogBox extends JDialog 
-implements ActionListener{
 
+class DialogBox extends JDialog implements ActionListener {
+    
 	JButton b1;
-	ZipcodeFrame f;
-	
-	public DialogBox(ZipcodeFrame f, String title, String msg) {
-		super(f, true);
-		this.f = f;
-		setTitle(title);
-		add(new JLabel(msg, JLabel.CENTER));
-		
-		JPanel p = new JPanel();
-		p.setLayout(new FlowLayout());
-		b1 = new JButton("í™•ì¸");
-		p.add(b1);
-		b1.addActionListener(this);//ì´ë²¤íŠ¸ ì—°ê²°
-		
-		add(p, BorderLayout.SOUTH);
-		
-		setSize(250, 150);//ì•Œë¦¼ì°½ í¬ê¸°
-		setLocation(f.getX()+f.getWidth()/2-(this.getWidth()/2),
-				f.getY()+f.getHeight()/2-(this.getHeight()/2));//ZipcodeFrameì˜ ì¤‘ê°„ì— ìœ„ì¹˜
-		//setLocation(f.getX(),f.getY());
-		setVisible(true);
-	}
-	
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		dispose();//ì°½ì´ ì‚¬ë¼ì§
-	}
+    ZipcodeFrame cp;
+    
+    DialogBox(ZipcodeFrame cp,String name,String title) {
+        super(cp, true);
+        this.cp = cp;
+        setTitle(title);
+        // ¸Ş½ÃÁö Ãâ·Â
+        add(new JLabel(name, JLabel.CENTER));
+        
+        JPanel pan = new JPanel();
+        pan.setLayout(new FlowLayout());
+        add(pan, BorderLayout.SOUTH);
+
+        b1 = new JButton("È®ÀÎ");
+        pan.add(b1);
+        b1.addActionListener(this);
+        	
+        setSize(250, 150);
+        setLocation(cp.getWidth()/2-(this.getWidth()/2),cp.getHeight()/2-(this.getHeight()/2));
+        setVisible(true);
+    }
+
+    // ´ÙÀÌ¾ó·Î±× À§ÀÇ ¹öÆ°À» Å¬¸¯ÇßÀ» ¶§
+    public void actionPerformed(ActionEvent evt) {
+        dispose();
+    }
 }
-
-
-
-

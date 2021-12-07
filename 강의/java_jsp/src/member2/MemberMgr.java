@@ -10,29 +10,32 @@ public class MemberMgr {
 	private DBConnectionMgr pool;
 	
 	public MemberMgr() {
-		//DBConnection Í∞ùÏ≤¥ 10Í∞ú ÎØ∏Î¶¨ ÏÉùÏÑ±
+		//DBConnection ∞¥√º 10∞≥ πÃ∏Æ ª˝º∫
 		pool = DBConnectionMgr.getInstance();
 	}
 
-	//Î™®Îì†Î¶¨Ïä§Ìä∏- select =>db1
+	//∏µÁ∏ÆΩ∫∆Æ- select =>db1
 	public Vector<MemberBean> selectAll(){
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String sql = null;
-		Vector<MemberBean> vlist = new Vector<MemberBean>();
+		Vector<MemberBean> vlist = 
+				new Vector<MemberBean>();
 		try {
+			//poolø°º≠ ∫Ù∑¡ø¬¥Ÿ.
 			con = pool.getConnection();
 			sql = "select * from tblMember2";
 			pstmt = con.prepareStatement(sql);
-			
-			rs = pstmt.executeQuery();
-			while(rs.next()) {
-				MemberBean bean 
-				= new MemberBean(rs.getInt("id"), 
-						rs.getString("name"), rs.getString("phone"),
-						rs.getString("team"), rs.getString("address"));
-				vlist.addElement(bean);
+			rs = pstmt.executeQuery();//select
+			while(rs.next()){
+				MemberBean bean = new MemberBean();
+				bean.setId(rs.getInt("id"));
+				bean.setName(rs.getString("name"));
+				bean.setPhone(rs.getString("phone"));
+				bean.setTeam(rs.getString("team"));
+				bean.setAddress(rs.getString("address"));
+				vlist.add(bean);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -42,12 +45,12 @@ public class MemberMgr {
 		return vlist;
 	}
 	
-	//Ï†ÄÏû• => insert, update ,delete => db2
+	//¿˙¿Â => insert, update ,delete => db2
 	public boolean insert(MemberBean bean){
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = null;
 		boolean flag = false;
+		String sql = null;
 		try {
 			con = pool.getConnection();
 			sql = "insert tblMember2(name,phone,team,address)values(?,?,?,?)";
@@ -56,9 +59,8 @@ public class MemberMgr {
 			pstmt.setString(2, bean.getPhone());
 			pstmt.setString(3, bean.getTeam());
 			pstmt.setString(4, bean.getAddress());
-			//Ï†ÅÏö©Îêú Î†àÏΩîÎìú Í∞ØÏàò Î¶¨ÌÑ¥ -> ÏÑ±Í≥µ : 1, Ïã§Ìå® : 0
-			int cnt = pstmt.executeUpdate();
-			if(cnt==1) flag = true;
+			int count = pstmt.executeUpdate();//insert,update,delete
+			if(count==1) flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -66,9 +68,8 @@ public class MemberMgr {
 		}
 		return flag;
 	}
-		
 	
-	//ÌïúÍ∞úÏùò Î†àÏΩîÎìú
+	//«—∞≥¿« ∑πƒ⁄µÂ
 	public MemberBean select(int id){
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -77,11 +78,11 @@ public class MemberMgr {
 		MemberBean bean = new MemberBean();
 		try {
 			con = pool.getConnection();
-			sql = "select * from tblMember2 where id = ?";
+			sql = "select * from tblMember2 where id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, id);
 			rs = pstmt.executeQuery();
-			if(rs.next()) {
+			if(rs.next()){
 				bean.setId(rs.getInt("id"));
 				bean.setName(rs.getString("name"));
 				bean.setPhone(rs.getString("phone"));
@@ -95,26 +96,45 @@ public class MemberMgr {
 		}
 		return bean;
 	}
-
 	
-	//ÏàòÏ†ï
+	//ªË¡¶
+	public boolean delete(int id){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		boolean flag = false;
+		String sql = null;
+		try {
+			con = pool.getConnection();
+			sql = "delete from tblMember2 where id=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, id);
+			if(pstmt.executeUpdate()==1) flag = true; 
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt);
+		}
+		return flag;
+	}
+	
+	//ºˆ¡§
 	public boolean update(MemberBean bean){
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		String sql = null;
 		boolean flag = false;
+		String sql = null;
 		try {
 			con = pool.getConnection();
-			sql = "update tblMember2 set name=?,phone=?,team=?,address=? "
-					+ "where id=?";
+			sql = "update tblMember2 set name=?,phone=?,team=?,"
+					+ "address=? where id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, bean.getName());
 			pstmt.setString(2, bean.getPhone());
 			pstmt.setString(3, bean.getTeam());
 			pstmt.setString(4, bean.getAddress());
 			pstmt.setInt(5, bean.getId());
-			int cnt = pstmt.executeUpdate();
-			if(cnt==1) flag = true;
+			int count = pstmt.executeUpdate();
+			if(count==1) flag = true;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -122,29 +142,6 @@ public class MemberMgr {
 		}
 		return flag;
 	}
-	
-	//ÏÇ≠Ï†ú
-	public boolean delete(int id){
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		String sql = null;
-		boolean flag = false;
-		try {
-			con = pool.getConnection();
-			sql = "delete from tblMember2 where id = ?";
-			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1, id);
-			if(pstmt.executeUpdate()==1) 
-				flag = true;
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			pool.freeConnection(con, pstmt);
-		}
-		return flag;
-	}
-	
-
 }
 
 

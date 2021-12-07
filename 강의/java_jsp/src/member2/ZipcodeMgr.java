@@ -13,26 +13,27 @@ public class ZipcodeMgr {
 		pool = DBConnectionMgr.getInstance();
 	}
 	
-	//ìš°íŽ¸ë²ˆí˜¸ ê²€ìƒ‰
+	//¿ìÆí¹øÈ£ °Ë»ö
 	public Vector<ZipcodeBean> zipcodeRead(String area3){
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String sql = null;
-		Vector<ZipcodeBean> vlist  = new Vector<ZipcodeBean>();
+		Vector<ZipcodeBean> vlist = new Vector<ZipcodeBean>();
 		try {
 			con = pool.getConnection();
-			sql = "select * from tblZipcode where area3 like ?";
+			sql = "select * from tblzipcode where area3 like ?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, "%"+area3+"%");//? -> '%ê°•ë‚¨ëŒ€ë¡œ%'
+			pstmt.setString(1, area3+"%");
 			rs = pstmt.executeQuery();
-			while(rs.next()) {
+			while(rs.next()){
 				ZipcodeBean bean = new ZipcodeBean();
-				bean.setZipcode(rs.getString(1));//zipcode ì»¬ëŸ¼
-				bean.setArea1(rs.getString(2));
+				bean.setZipcode(rs.getString(1/*zipcode ÄÃ·³*/));
+				bean.setArea1(rs.getString(2/*area1 ÄÃ·³*/));
 				bean.setArea2(rs.getString(3));
 				bean.setArea3(rs.getString(4));
-				vlist.addElement(bean);
+				bean.setArea4(rs.getString(5));
+				vlist.add(bean);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

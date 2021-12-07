@@ -1,6 +1,7 @@
 package member2;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -19,6 +20,7 @@ public class MFrame extends Frame{
 		this(w,h,c,false);
 	}
 	public MFrame(int w, int h, Color c, boolean flag) {
+		//setLayout(new FlowLayout());
 		setSize(w, h);
 		setBackground(c);
 		addWindowListener(new WindowAdapter() {
