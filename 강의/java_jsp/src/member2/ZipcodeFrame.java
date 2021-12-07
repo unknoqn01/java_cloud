@@ -98,7 +98,7 @@ public class ZipcodeFrame extends Frame implements ActionListener{
 					}
 				}
 			}
-		}else if(obj==list||obj==searchBtn) {
+		}else if(obj==list||obj==selectBtn) {
 			
 		}
 	}
