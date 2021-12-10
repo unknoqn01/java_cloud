@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <h3>부트스트랩 버튼사용하기</h3>
+
+        <button class="btn">기본 버튼</button>
+        <button class="btn btn-link">링크 버튼</button>
+
+        <button class="btn btn-primary">primary 버튼</button>
+        <button class="btn btn-secondary">secondary 버튼</button>
+        <button class="btn btn-outline-success">success outline 버튼</button>
+        <button class="btn btn-outline-info">info outline 버튼</button>
+
+        <input type="button" class="btn btn-warning" value="warning 버튼">
+        <input type="button" class="btn btn-outline-danger" value="danger outline 버튼">
+
+        <a href="#" class="btn btn-light">light 버튼</a>
+        <a href="#" class="btn btn-outline-dark">dark outline 버튼</a>
+
+        <hr>
+        <h3>미리 지정된 버튼 크기 사용</h3>
+        <button class="btn btn-lg btn-primary">큰 버튼</button>
+        <input type="button" class="btn btn-primary" value="기본 크기 버튼">
+        <a href="#" class="btn btn-sm btn-primary">작은 버튼</a>
+
+        <hr>
+        <h3>블록 레벨 버튼</h3>
+        <!-- bootstrap5에서 블록 레벨 버튼 사용 방법이 변경됨 -->
+        <!-- 블록 레벨 버튼의 부모 태그에 .d-grid 클래스를 추가하여 사용 -->
+        <!-- 블록 레벨 버튼을 2개 이상 사용 시 각 버튼에 여백이 사라짐 -->
+        <!-- 각 블록 레벨 버튼에 여백을 주기 위해서 .gap 클래스가 존재함 -->
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary">블록 레벨 버튼</button>
+            <button class="btn btn-primary">블록 레벨 버튼</button>
+            <button class="btn btn-primary">블록 레벨 버튼</button>
+        </div>
+        <button class="btn btn-primary">블록 레벨 버튼</button>
+
+        <hr>
+        <h3>버튼의 활성/비활성</h3>
+        <button class="btn btn-primary active">활성 상태 버튼</button>
+        <button class="btn btn-primary">일반 상태 버튼</button>
+        <button class="btn btn-primary" disabled>비활성 상태 버튼</button>
+        <br>
+        <input type="button" class="btn btn-danger active" value="활성 상태 버튼">
+        <input type="button" class="btn btn-danger" value="일반 상태 버튼">
+        <input type="button" class="btn btn-danger" disabled value="비활성 상태 버튼">
+        <br>
+        <a href="#" class="btn btn-success active">활성 상태 링크</a>
+        <a href="#" class="btn btn-success">일반 상태 링크</a>
+        <a href="#" class="btn btn-success disabled">비활성 상태 링크</a>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

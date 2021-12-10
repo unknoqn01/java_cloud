@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h3>부트스트랩 테이블 만들기</h3>
+
+        <table class="table table-hover table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>유재석</td>
+                    <td>방송인</td>
+                    <td>남성</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>이정재</td>
+                    <td>배우</td>
+                    <td>남성</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>유인나</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- 전체 색상을 변경하려면 table 태그에 테마 컬러 사용 -->
+        <table class="table table-hover">
+            <!-- 테이블의 헤더에만 색상을 적용하려면 thead에 테마 컬러 사용 -->
+            <thead class="">
+                <tr>
+                    <th>순번</th>
+                    <th>테마컬러명</th>
+                    <th>기타</th>
+                </tr>
+            </thead>
+            <!-- 테이블의 데이터 영역에만 색상을 적용하려면 tbody에 테마 컬러 사용 -->
+            <tbody class="">
+                <!-- 각각의 row마다 다른 색상을 적용하려면 tr에 테마 컬러를 사용 -->
+                <tr class="table-primary">
+                    <td>1</td>
+                    <td>table-primary</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-secondary">
+                    <td>2</td>
+                    <td>table-secondary</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-success">
+                    <td>3</td>
+                    <td>table-success</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-info">
+                    <td>4</td>
+                    <td>table-info</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>5</td>
+                    <td>table-warning</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-danger">
+                    <td>6</td>
+                    <td>table-danger</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-active">
+                    <td>7</td>
+                    <td>table-active</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-light">
+                    <td>8</td>
+                    <td>table-dark</td>
+                    <td>...</td>
+                </tr>
+                <tr class="table-dark">
+                    <td>9</td>
+                    <td>table-light</td>
+                    <td>...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <table class="table table-hover table-striped table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>유재석</td>
+                    <td>방송인</td>
+                    <td>남성</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>이정재</td>
+                    <td>배우</td>
+                    <td>남성</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>유인나</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>순번</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>유재석</td>
+                    <td>방송인</td>
+                    <td>남성</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>이정재</td>
+                    <td>배우</td>
+                    <td>남성</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>유인나</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+    </div>
+
+    <div class="container">
+        <div class="table-responsive-md">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>column 0</th>
+                        <th>column 1</th>
+                        <th>column 2</th>
+                        <th>column 3</th>
+                        <th>column 4</th>
+                        <th>column 5</th>
+                        <th>column 6</th>
+                        <th>column 7</th>
+                        <th>column 8</th>
+                        <th>column 9</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>c0</td>
+                        <td>c1</td>
+                        <td>c2</td>
+                        <td>c3</td>
+                        <td>c4</td>
+                        <td>c5</td>
+                        <td>c6</td>
+                        <td>c7</td>
+                        <td>c8</td>
+                        <td>c9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

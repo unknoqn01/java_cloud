@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div01 > .p1 { font-size: 16px ; }
+        #div01 > .p2 { font-size: 1em; }
+        #div01 > .p3 { font-size: 1rem; }
+        #div01 > .p4 { font-size: 100%; }
+
+        #div02 > .p1 { font-size: 24px ; }
+        #div02 > .p2 { font-size: 1.5em; }
+        #div02 > .p3 { font-size: 1.5rem; }
+        #div02 > .p4 { font-size: 150%; }
+
+        #div03 > .p1 { font-size: 32px ; }
+        #div03 > .p2 { font-size: 2em; }
+        #div03 > .p3 { font-size: 2rem; }
+        #div03 > .p4 { font-size: 200%; }
+
+        #div04 #sub01 { font-size: 20px; }
+        #div04 #subsub01 { font-size: 30px; }
+
+        #div04 #sub02 { font-size: 20px; }
+        #div04 #subsub02 { font-size: 30px; }
+
+        #div04 > .p1 { font-size: 2em; }
+        #div04 > #sub01 > .p1 { font-size: 2em; }
+        #div04 > #sub01 > #subsub01 > .p1 { font-size: 2em; }
+
+        #div04 > .p2 { font-size: 2rem; }
+        #div04 > #sub02 > .p2 { font-size: 2rem; }
+        #div04 > #sub02 > #subsub02 > .p2 { font-size: 2rem; }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <p class="p1">16px 사용 시</p>
+        <p class="p2">1em 사용 시</p>
+        <p class="p3">1rem 사용 시</p>
+        <p class="p4">100% 사용 시</p>
+    </div>
+    <hr>
+    <div id="div02">
+        <p class="p1">24px 사용 시</p>
+        <p class="p2">1.5em 사용 시</p>
+        <p class="p3">1.5rem 사용 시</p>
+        <p class="p4">150% 사용 시</p>
+    </div>
+    <hr>
+    <div id="div03">
+        <p class="p1">32px 사용 시</p>
+        <p class="p2">2em 사용 시</p>
+        <p class="p3">2rem 사용 시</p>
+        <p class="p4">200% 사용 시</p>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <p class="p1">2em 사용</p>
+        <div id="sub01">
+            <p class="p1">2em 사용</p>
+            <div id="subsub01">
+                <p class="p1">2em 사용</p>
+            </div>
+        </div>
+        <hr>
+        <p class="p2">2rem 사용</p>
+        <div id="sub02">
+            <p class="p2">2rem 사용</p>
+            <div id="subsub02">
+                <p class="p2">2rem 사용</p>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
