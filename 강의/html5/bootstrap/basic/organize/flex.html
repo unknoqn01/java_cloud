@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div>
+            <h3>기본 flex 사용하기</h3>
+            <!-- flex-row가 기본값이기 때문에 빼도 상관없음 -->
+            <div class="d-flex flex-row bg-secondary">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex flex-row-reverse bg-secondary">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+
+            <hr>
+            <h3>float로 구현</h3>
+            <div class="clearfix bg-secondary">
+                <div class="bg-info p-2 float-start">플렉스 아이템 1</div>
+                <div class="bg-warning p-2 float-start">플렉스 아이템 2</div>
+                <div class="bg-success p-2 float-start">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="clearfix bg-secondary">
+                <div class="bg-info p-2 float-end">플렉스 아이템 1</div>
+                <div class="bg-warning p-2 float-end">플렉스 아이템 2</div>
+                <div class="bg-success p-2 float-end">플렉스 아이템 3</div>
+            </div>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>수직 방향 flex 사용하기</h3>
+            <div class="d-flex flex-column bg-secondary">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex flex-column-reverse bg-secondary">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>컨텐츠 정렬 사용하기</h3>
+            <div class="d-flex bg-secondary justify-content-start">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary justify-content-center">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary justify-content-end">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary justify-content-between">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary justify-content-around">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2">플렉스 아이템 3</div>
+            </div>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>크기 채우기</h3>
+            <div class="d-flex bg-secondary">
+                <div class="bg-info p-2 flex-fill">플렉스 아이템 1</div>
+                <div class="bg-warning p-2 flex-fill">플렉스 아이템 2</div>
+                <div class="bg-success p-2 flex-fill">플렉스 아이템 3</div>
+                <div class="bg-danger p-2 flex-fill">플렉스 아이템 4</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary">
+                <div class="bg-info p-2">플렉스 아이템 1</div>
+                <div class="bg-warning p-2">플렉스 아이템 2</div>
+                <div class="bg-success p-2 flex-grow-1">플렉스 아이템 3</div>
+            </div>
+            <br>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>order로 순서 변경하기</h3>
+            <div class="d-flex">
+                <div class="bg-primary p-2">플렉스 아이템 1</div>
+                <div class="bg-success p-2">플렉스 아이템 2</div>
+                <div class="bg-info p-2">플렉스 아이템 3</div>
+                <div class="bg-warning p-2">플렉스 아이템 4</div>
+                <div class="bg-danger p-2">플렉스 아이템 5</div>
+            </div>
+            <br>
+            <div class="d-flex">
+                <div class="bg-primary p-2 order-5">플렉스 아이템 1</div>
+                <div class="bg-success p-2 order-3">플렉스 아이템 2</div>
+                <div class="bg-info p-2 order-4">플렉스 아이템 3</div>
+                <div class="bg-warning p-2 order-1">플렉스 아이템 4</div>
+                <div class="bg-danger p-2 order-2">플렉스 아이템 5</div>
+            </div>
+        </div>
+        <br><hr><br>
+        <div>
+            <div>margin을 이용한 정렬</div>
+            <div class="d-flex bg-secondary">
+                <div class="bg-success p-2 ms-auto">플렉스 아이템 1</div>
+                <div class="bg-info p-2">플렉스 아이템 2</div>
+                <div class="bg-warning p-2">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary">
+                <div class="bg-success p-2">플렉스 아이템 1</div>
+                <div class="bg-info p-2">플렉스 아이템 2</div>
+                <div class="bg-warning p-2 me-auto">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary">
+                <div class="bg-success p-2 ms-auto">플렉스 아이템 1</div>
+                <div class="bg-info p-2">플렉스 아이템 2</div>
+                <div class="bg-warning p-2 me-auto">플렉스 아이템 3</div>
+            </div>
+            <br>
+            <div class="d-flex bg-secondary">
+                <div class="bg-success p-2">플렉스 아이템 1</div>
+                <div class="bg-info p-2 me-auto">플렉스 아이템 2</div>
+                <div class="bg-warning p-2 ">플렉스 아이템 3</div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
