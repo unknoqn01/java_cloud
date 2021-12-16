@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/bootstrap.bundle.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+  <style>
+    .img-box {
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-dark">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a href="#" class="navbar-brand">Carousel</a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#div-collapse-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="div-collapse-menu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <div id="div-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#div-carousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#div-carousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#div-carousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/image4.jpg" class="d-block w-100" style="max-height: 700px;">
+          <div class="carousel-caption text-start">
+            <h3>캐러셀 제목 1</h3>
+            <p>캐러셀 내용.....</p>
+            <button class="btn btn-primary">버튼</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/image5.jpg" class="d-block w-100" style="max-height: 700px;">
+          <div class="carousel-caption">
+            <h3>캐러셀 제목 2</h3>
+            <p>캐러셀 내용.....</p>
+            <button class="btn btn-primary">버튼</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/image6.jpg" class="d-block w-100" style="max-height: 700px;">
+          <div class="carousel-caption text-end">
+            <h3>캐러셀 제목 3</h3>
+            <p>캐러셀 내용.....</p>
+            <button class="btn btn-primary">버튼</button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#div-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#div-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="row border-top mb-5 py-5">
+      <div class="col-lg text-center">
+        <div class="mx-auto" style="width: 150px; height: 150px;">
+          <img src="./images/cat.jpg" alt="" class="rounded-circle w-100 h-100">
+        </div>
+        <h1>Heading</h1>
+        <p class="lead text-muted">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <button class="btn btn-secondary">View details &raquo;</button>
+      </div>
+      <div class="col-lg text-center">
+        <div class="mx-auto" style="width: 150px; height: 150px;">
+          <img src="./images/cat.jpg" alt="" class="rounded-circle w-100 h-100">
+        </div>
+        <h1>Heading</h1>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <button class="btn btn-secondary">View details &raquo;</button>
+      </div>
+      <div class="col-lg text-center">
+        <div class="mx-auto" style="width: 150px; height: 150px;">
+          <img src="./images/cat.jpg" alt="" class="rounded-circle w-100 h-100">
+        </div>
+        <h1>Heading</h1>
+        <p class="lead text-muted">Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <button class="btn btn-secondary">View details &raquo;</button>
+      </div>
+    </div>
+    <div class="row border-top py-5">
+      <div class="col-7">
+        <h1 class="display-5 mt-5 pt-5">First featurette heading. It’ll blow your mind.</h1>
+        <p class="lead text-muted">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-5">
+        <div class="img-box bg-secondary">
+
+        </div>
+      </div>
+    </div>
+    <div class="row border-top py-5">
+      <div class="col-5">
+        <div class="img-box bg-secondary">
+          
+        </div>
+      </div>
+      <div class="col-7">
+        <h1 class="display-5 mt-5 pt-5">Oh yeah, it’s that good. See for yourself.</h1>
+        <p class="lead text-muted">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+    </div>
+    <div class="row border-top py-5">
+      <div class="col-7 h-100">
+        <h1 class="display-5 mt-5 pt-5">And lastly, this one. Checkmate.</h1>
+        <p>And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-5">
+        <div class="img-box bg-secondary">
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container border-top py-5 clearfix">
+    <div class="float-start">
+      <p>&copy; 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </div>
+    <div class="float-end">
+      <a href="#">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
