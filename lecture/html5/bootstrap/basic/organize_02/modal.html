@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3>modal 사용하기</h3>
+        
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal1">모달창 호출</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal2">애니메이션 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal3">sm 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal4">lg 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal5">xl 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal6">전체화면 모달창</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal7">화면 중앙에 호출</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal8">모달창 내에 내용이 많을 경우</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#div-modal9">스크롤 사용</button>
+
+        <div id="div-modal1" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header영역</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>모달창 body 영역</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal2" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>애니메이션 효과가 추가된 모달창</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal3" class="modal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>sm 크기로 출력되는 모달창</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal4" class="modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>lg 크기로 출력되는 모달창</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal5" class="modal">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>xl 크기로 출력되는 모달창</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal6" class="modal">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>전체화면 크기로 출력되는 모달창</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal7" class="modal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>화면 중앙에 출력되는 모달창</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal8" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다.</p>
+
+<p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다.</p>
+
+<p>선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다.</p>
+
+<p>모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.</p>
+
+<p>누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.</p>
+
+<p>대한민국의 영토는 한반도와 그 부속도서로 한다. 대법관은 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명한다.</p>
+
+<p>행정각부의 설치·조직과 직무범위는 법률로 정한다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다.</p>
+
+<p>누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다.</p>
+
+<p>국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다.</p>
+
+<p>모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다.</p>
+<p>제2항의 재판관중 3인은 국회에서 선출하는 자를, 3인은 대법원장이 지명하는 자를 임명한다.</p>
+
+<p>국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.</p>
+
+<p>감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다.</p>
+
+<p>국가는 모성의 보호를 위하여 노력하여야 한다. 훈장등의 영전은 이를 받은 자에게만 효력이 있고, 어떠한 특권도 이에 따르지 아니한다.</p>
+
+<p>의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.</p>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="div-modal9" class="modal">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 header</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다.</p>
+
+<p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다.</p>
+
+<p>선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다.</p>
+
+<p>모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.</p>
+
+<p>누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.</p>
+
+<p>대한민국의 영토는 한반도와 그 부속도서로 한다. 대법관은 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명한다.</p>
+
+<p>행정각부의 설치·조직과 직무범위는 법률로 정한다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를 행한다.</p>
+
+<p>누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다.</p>
+
+<p>국회의원은 현행범인인 경우를 제외하고는 회기중 국회의 동의없이 체포 또는 구금되지 아니한다.</p>
+
+<p>모든 국민은 헌법과 법률이 정한 법관에 의하여 법률에 의한 재판을 받을 권리를 가진다.</p>
+<p>제2항의 재판관중 3인은 국회에서 선출하는 자를, 3인은 대법원장이 지명하는 자를 임명한다.</p>
+
+<p>국회는 의원의 자격을 심사하며, 의원을 징계할 수 있다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.</p>
+
+<p>감사원은 세입·세출의 결산을 매년 검사하여 대통령과 차년도국회에 그 결과를 보고하여야 한다.</p>
+
+<p>국가는 모성의 보호를 위하여 노력하여야 한다. 훈장등의 영전은 이를 받은 자에게만 효력이 있고, 어떠한 특권도 이에 따르지 아니한다.</p>
+
+<p>의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

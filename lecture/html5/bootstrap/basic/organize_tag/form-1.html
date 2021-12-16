@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div>
+            <h3>stacked form 사용하기</h3>
+            <form action="#" method="get">
+                <div class="my-3">
+                    <label for="" class="form-label">ID : </label>
+                    <input type="text" class="form-control" >
+                </div>
+                <div class="my-3">
+                    <label for="" class="form-label">PW : </label>
+                    <input type="password" class="form-control">
+                </div>
+                <!-- textarea에도 form-control을 적용 -->
+                <div class="my-3">
+                    <label for="" class="form-label">Comment : </label>
+                    <textarea class="form-control" cols="30" rows="10"></textarea>
+                </div>
+                <div class="my-3 clearfix">
+                    <button class="btn btn-primary float-start">전송</button>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>inline form 사용</h3>
+            <form action="#">
+                <div class="row my-3">
+                    <div class="col-auto">
+                        <label for="" class="col-form-label">ID : </label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-auto">
+                        <label for="" class="col-form-label">PW : </label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-outline-primary">전송</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h3>input 태그 크기 변경</h3>
+            <form action="#">
+                <div class="my-3">
+                    <input type="text" class="form-control form-control-lg" placeholder="큰 input 태그">
+                </div>
+                <div class="my-3">
+                    <input type="text" class="form-control" placeholder="기본 input 태그">
+                </div>
+                <div class="my-3">
+                    <input type="text" class="form-control form-control-sm" placeholder="작은 input 태그">
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>비활성화, 읽기 전용</h3>
+            <form action="#">
+                <input type="text" class="form-control" disabled placeholder="비활성화된 input 태그">
+                <input type="text" class="form-control" readonly placeholder="읽기전용 input 태그">
+                <input type="text" class="form-control" placeholder="기본 input 태그">
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>color picker 사용</h3>
+            <form action="#">
+                <div class="my-3">
+                    <label for="" class="form-label">color : </label>
+                    <input type="color" class="form-control form-control-color" value="#dddddd">
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>select box </h3>
+            <form action="#">
+                <div class="my-3">
+                    <label for="" class="form-label">Select Box : </label>
+                    <select class="form-select" disabled>
+                        <option value="사과">사과</option>
+                        <option value="바나나">바나나</option>
+                        <option value="배">배</option>
+                    </select>
+                </div>
+                <div class="my-3">
+                    <label for="" class="form-label">Select Box : </label>
+                    <select class="form-select form-select-lg">
+                        <option value="사과">사과</option>
+                        <option value="바나나">바나나</option>
+                        <option value="배">배</option>
+                    </select>
+                </div>
+                <div class="my-3">
+                    <label for="" class="form-label">Select Box : </label>
+                    <select class="form-select form-select-sm">
+                        <option value="사과">사과</option>
+                        <option value="바나나">바나나</option>
+                        <option value="배">배</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h3>DataList 사용하기</h3>
+            <form action="#">
+                <div class="my-3">
+                    <label for="" class="form-label">Datalist : </label>
+                    <input type="text" class="form-control" list="jobs">
+                    <datalist id="jobs">
+                        <option value="개발자">개발자</option>
+                        <option value="가수">가수</option>
+                        <option value="배우">배우</option>
+                    </datalist>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>checkbox 사용하기</h3>
+            <form action="#">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check1" value="사과" checked>
+                    <label for="check1" class="form-check-label">사과</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check2" value="배">
+                    <label for="check2" class="form-check-label">배</label>
+                </div>
+                <div class="form-check">
+                    <label for="check3" class="form-check-label">바나나</label>
+                    <input type="checkbox" class="form-check-input" id="check3" value="바나나" disabled>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>radio 사용</h3>
+            <form action="#">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio1" name="radio" value="사과" checked>
+                    <label for="radio1" class="form-check-label">사과</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio2" name="radio" value="배">
+                    <label for="radio2" class="form-check-label">배</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio3" name="radio" value="바나나" disabled>
+                    <label for="radio3" class="form-check-label">바나나</label>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>switch 타입 checkbox</h3>
+            <form action="#">
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="check1" value="yes">
+                    <label for="check1" class="form-check-label">전원 on</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="radio" name="radio2" class="form-check-input" id="ra1" value="사과">
+                    <label for="ra1" class="form-check-label">사과</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="radio" name="radio2" class="form-check-input" id="ra2" value="배">
+                    <label for="ra2" class="form-check-label">배</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="radio" name="radio2" class="form-check-input" id="ra3" value="바나나">
+                    <label for="ra3" class="form-check-label">바나나</label>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>inline 방식 checkbox, radio</h3>
+            <form action="#">
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="ch1" value="사과">
+                    <label for="ch1" class="form-check-label">사과</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" id="ch2" value="배">
+                    <label for="ch2" class="form-check-label">배</label>
+                </div>
+                <hr>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="rad1" value="사과" name="rad">
+                    <label for="rad1" class="form-check-label">사과</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" id="rad2" value="배" name="rad">
+                    <label for="rad2" class="form-check-label">배</label>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>Range 사용하기</h3>
+            <form action="#">
+                <div class="my-3">
+                    <label for="" class="form-label">range 기본형 :  </label>
+                    <input type="range" class="d-block w-100" min="0" max="10" step="1" value="5">
+                </div>
+                <div>
+                    <label for="" class="form-label">bootstrap의 range : </label>
+                    <input type="range" class="form-range" min="0" max="10" step="1" value="5">
+                </div>
+            </form>
+        </div>
+        <div>
+            <h3>input group 사용하기</h3>
+            <form action="#">
+                <div class="input-group my-3">
+                    <span class="input-group-text">ID</span>
+                    <input type="text" class="form-control" placeholder="ID를 입력하세요">
+                </div>
+                <div class="input-group my-3">
+                    <input type="password" class="form-control" placeholder="email을 입력하세요">
+                    <span class="input-group-text">@gmail.com</span>
+                </div>
+                <hr>
+                <div class="input-group input-group-lg my-3">
+                    <span class="input-group-text">큰 input group</span>
+                    <input type="text" class="form-control" >
+                </div>
+                <div class="input-group my-3">
+                    <span class="input-group-text">기본 input group</span>
+                    <input type="text" class="form-control" >
+                </div>
+                <div class="input-group input-group-sm my-3">
+                    <span class="input-group-text">작은 input group</span>
+                    <input type="text" class="form-control" >
+                </div>
+                <hr>
+                <div class="input-group my-3">
+                    <span class="input-group-text">input 여러개</span>
+                    <input type="text" class="form-control">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group my-3">
+                    <span class="input-group-text">첫번째 캡션</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-text">두번째 캡션</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-text">세번째 캡션</span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-text">네번째 캡션</span>
+                </div>
+                <hr>
+                <div class="input-group my-3">
+                    <div class="input-group-text">
+                        <input type="checkbox">
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group my-3">
+                    <div class="input-group-text">
+                        <input type="radio">
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+                <hr>
+                <div class="input-group my-3">
+                    <button class="btn btn-primary">버튼</button>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="input-group my-3">
+                    <input type="text" class="form-control">
+                    <button class="btn btn-primary">버튼</button>
+                    <button class="btn btn-info">버튼</button>
+                </div>
+            </form>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>Floating label</h3>
+            <form action="#">
+                <div class="my-3">
+                    <label for="" class="form-label">기본형 label : </label>
+                    <input type="text" class="form-control" placeholder="기본형 label로 사용자 클릭 시 텍스트 삭제">
+                </div>
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" placeholder="사용자 클릭 시 텍스트가 작아지고 그대로 존재함">
+                    <label for="">floating label</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

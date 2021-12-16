@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <div class="container mt-3">
+        <div class="mt-4 p-5 bg-secondary text-white rounded">
+            <h1>jumbotron 구현하기</h1>
+            <p>컨텐츠의 내용 및 해당 페이지의 정보를 간단하게 작성</p>
+        </div>
+        <div>
+            <h3>드랍다운 버튼</h3>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item active">링크 1</a></li>
+                    <li><a href="#" class="dropdown-item">링크 2</a></li>
+                    <li><a href="#" class="dropdown-item">링크 3</a></li>
+                    <li><a href="#" class="dropdown-item disabled">링크 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>하위 메뉴 구분자, 헤더, 단순 문자 표현</h3>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">드랍다운버튼</button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">링크 1</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><h4 class="dropdown-header">dropdown-header</h4></li>
+                    <li><a href="#" class="dropdown-item">링크 2</a></li>
+                    <li><span class="dropdown-item-text">그냥 문자열</span></li>
+                </ul>
+            </div>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>버튼 그룹의 요소로 드랍다운 버튼 사용</h3>
+            <div class="btn-group">
+                <button class="btn btn-primary">사과</button>
+                <button class="btn btn-primary">배</button>
+                <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">감귤류</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">제주감귤</a></li>
+                        <li><a href="#" class="dropdown-item">한라봉</a></li>
+                        <li><a href="#" class="dropdown-item">천애향</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

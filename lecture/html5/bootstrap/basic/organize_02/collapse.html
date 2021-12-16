@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div>
+            <h3>collapse 사용하기</h3>
+            
+            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#div-collapse1">클릭 시 숨김/보임</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#div-collapse2">클릭 시 숨김/보임2</button>
+
+            <div class="collapse" id="div-collapse1">
+                <h3>collapse 사용하기</h3>
+                <p>collapse를 사용하면 숨겨졌던 영역이 출력됨</p>
+            </div>
+            <br>
+            <div class="collapse show" id="div-collapse2">
+                <h3>collapse 사용하기2</h3>
+                <p>collapse는 기본값으로 hide임</p>
+                <p>show 클래스를 사용하여 처음부터 출력하는 방식으로 사용 가능</p>
+            </div>
+        </div>
+        <br><hr><br>
+        <div>
+            <h3>collapse를 이용한 accordion 사용하기</h3>
+
+            <div id="accodion">
+                <div class="card">
+                    <div class="card-header">
+                        <a href="#div-accodion1" class="btn" data-bs-toggle="collapse">첫번째 영역</a>
+                    </div>
+                    <div class="collapse show" data-bs-parent="#accodion" id="div-accodion1">
+                        <div class="card-body">
+                            <p>collapse로 구현한 accodion 영역</p>
+                            <p>처음부터 열려있는 영역</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a href="#div-accodion2" class="btn" data-bs-toggle="collapse">두번째 영역</a>
+                    </div>
+                    <div class="collapse" data-bs-parent="#accodion" id="div-accodion2">
+                        <div class="card-body">
+                            <p>collapse로 구현한 accodion 영역</p>
+                            <p>처음에는 닫혀있는 영역</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a href="#div-accodion3" class="btn" data-bs-toggle="collapse">세번째 영역</a>
+                    </div>
+                    <div class="collapse" data-bs-parent="#accodion" id="div-accodion3">
+                        <div class="card-body">
+                            <p>collapse로 구현한 accodion 영역</p>
+                            <p>처음에는 닫혀있는 영역</p>
+                            <p>세번째 영역</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
