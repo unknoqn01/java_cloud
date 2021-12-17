@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+		auth="Container"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		loginTimeout="10"
+		username="testuser"
+		password="bitc1234"
+		url="jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC"
+		type="javax.sql.data.DataSource"
+		name="jdbc/mysqlDB"
+		global="jdbc/mysqlDB"
+	/>
+</Context >
+<!--name="jdbc/testdb"-->
