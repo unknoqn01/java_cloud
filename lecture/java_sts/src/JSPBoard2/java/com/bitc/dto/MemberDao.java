@@ -109,7 +109,6 @@ public class MemberDao {
 				se.printStackTrace();
 			}
 		}
-		
 		return member;
 	}
 	

@@ -37,6 +37,7 @@
 	}
 	else {
 		response.sendRedirect("login.jsp");
+// 		response.sendRedirect("login.jsp?login=false");
 	}
 	%>
 </body>
