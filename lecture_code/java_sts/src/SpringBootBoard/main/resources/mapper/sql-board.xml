@@ -21,4 +21,16 @@
 				idx DESC
 		]]>
 	</select>
+	
+	<!-- mybatis는 기본적으로 PreparedStatement 를 사용하여 SQL쿼리를 실행함 -->
+	<!-- mybatis에선 변수 입력 부분을 #{..} 으로 표기함 -->
+	<!-- #{..} 에 들어갈 변수는 Dto 클래스의 멤버 변수를 사용함 -->
+	<insert id="insertBoard" parameterType="com.bitc.board.dto.BoardDto">
+		<![CDATA[
+			INSERT INTO
+				t_board (title, contents, creator_id, created_date)
+			VALUES
+				(#{title}, #{contents}, #{creatorId}, NOW())
+		]]>
+	</insert>
 </mapper>

@@ -22,5 +22,10 @@ public class BoardServiceImpl implements BoardService {
 //		mybatis와 연결되어 있는 BoardMapper를 이용하여 실제 데이터베이스에서 데이터를 조회
 		return boardMapper.selectBoardList();
 	}
+	
+	@Override
+	public void insertBoard(BoardDto board) throws Exception {
+		boardMapper.insertBoard(board);
+	}
 
 }

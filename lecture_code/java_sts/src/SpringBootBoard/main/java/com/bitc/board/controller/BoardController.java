@@ -31,11 +31,25 @@ public class BoardController {
 		
 //		서비스 빈의 selectBoardList() 메서드를 실행하여 실제 데이터 목록을 가져옴
 		List<BoardDto> boardList = boardService.selectBoardList();
+		int arrays[] = {1, 2, 3, 4, 5};
 //		가져온 데이터 목록을 ModelAndView 클래스 타입의 객체에 추가
 		mv.addObject("boardList", boardList);
+		mv.addObject("arr", arrays);
 		
 //		클라이언트에 ModelAndView 클래스 타입의 객체를 전송
 		return mv;
+	}
+	
+	@RequestMapping("/board/writeBoard.do")
+	public String writeBoard() throws Exception {
+		return "/board/writeBoard";
+	}
+	
+	@RequestMapping("/board/insertBoard.do")
+	public String insertBoard(BoardDto board) throws Exception {
+		boardService.insertBoard(board);
+		
+		return "redirect:/board/openBoardList.do";
 	}
 }
 

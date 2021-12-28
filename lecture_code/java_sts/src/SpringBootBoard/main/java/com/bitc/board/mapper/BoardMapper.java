@@ -12,4 +12,6 @@ public interface BoardMapper {
 
 //	데이터 베이스 연결하여 게시글 목록을 불러오는 메서드
 	List<BoardDto> selectBoardList() throws Exception;
+	
+	void insertBoard(BoardDto board) throws Exception;
 }

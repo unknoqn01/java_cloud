@@ -9,4 +9,6 @@ public interface BoardService {
 
 //	게시판의 게시글 목록을 불러오는 메서드
 	List<BoardDto> selectBoardList() throws Exception;
+	
+	void insertBoard(BoardDto board) throws Exception;
 }
