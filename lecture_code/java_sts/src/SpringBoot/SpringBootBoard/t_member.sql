@@ -8,7 +8,7 @@ and deleted_yn = 'n';
 
 -- 사용자 등록
 insert into t_member (user_id, user_pw, user_name, user_email, user_phone, user_addr, user_gender)
-values ('tester01', 'bitc1234', '테스터유저01', 'tester01@bitc.co.kr', '012345678', '부산광역시', 'M');
+values ('tester04', 'bitc1234', '테스터유저04', 'tester04@bitc.co.kr', '012345678', '부산광역시', 'M');
 
 -- 사용자 수정
 update t_member set user_pw = '1234'
