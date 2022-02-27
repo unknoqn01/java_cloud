@@ -1,0 +1,4 @@
+spring boot jar 파일로 실행시 경로 에러 
+리눅스에서 '/' 인식 못함
+"/board/boardList" -> "board/boardList"
+'/' 제거
